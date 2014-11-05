@@ -1,0 +1,19 @@
+{
+  "name": "ftop",
+  "version": "1.4.2",
+  "author": "coderaiser <mnemonic.enemy@gmail.com> (https://github.com/coderaiser)",
+  "description": "Ftp operations",
+  "homepage": "http://github.com/coderaiser/ftop",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/coderaiser/ftop.git"
+  },
+  "dependencies": {
+    "pipe-io": "^1.1.0"
+  },
+  "license": "MIT",
+  "main": "lib/ftop.js",
+  "bin": {
+    "ftop": "bin/ftop.js"
+  }
+}
