@@ -16,6 +16,9 @@ eftipy ftp.mozilla.org
 
 # download file
 eftipy ftp.mozilla.org/README > README
+
+# upload file
+eftipy ftp.mozilla.org/README README
 ```
 
 ## License
