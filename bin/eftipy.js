@@ -8,19 +8,22 @@
         
         slice       = [].slice.bind(process.argv),
         argv        = slice(2),
-        addr        = argv.pop(),
-        error       = function(error) {
+        addr        = argv[0],
+        filename    = argv[1],
+        callback    = function(error) {
             if (error)
                 console.error(error.message);
+            
+            process.exit();
         },
         ftp;
     
     if (!addr) {
-        console.log('eftipy <host>');
+        console.log('eftipy <host> <filename>');
     } else {
-        ftp = eftipy(addr);
+        ftp = eftipy(addr, filename);
         
-        ftp.on('error', error);
+        ftp.on('error', callback);
         
         ftp.on('dir', function(list) {
             list.forEach(function(file) {
@@ -29,12 +32,7 @@
         });
         
         ftp.on('file', function(stream) {
-            pipe([stream, process.stdout], {end: true}, function(error) {
-                if (error)
-                    console.error(error.message);
-                
-                process.exit();
-            });
+            pipe([stream, process.stdout], callback);
         });
     }
 })();
