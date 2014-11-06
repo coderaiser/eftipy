@@ -2,7 +2,7 @@
   "name": "eftipy",
   "version": "0.1.1",
   "author": "coderaiser <mnemonic.enemy@gmail.com> (https://github.com/coderaiser)",
-  "description": "Ftp operations",
+  "description": "Ftp traversal",
   "homepage": "http://github.com/coderaiser/eftipy",
   "repository": {
     "type": "git",
