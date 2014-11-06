@@ -3,22 +3,24 @@
 (function() {
     'use strict';
     
-    var ftop        = require('../'),
+    var eftipy      = require('../'),
         pipe        = require('pipe-io'),
         
         slice       = [].slice.bind(process.argv),
         argv        = slice(2),
         addr        = argv.pop(),
+        error       = function(error) {
+            if (error)
+                console.error(error.message);
+        },
         ftp;
     
-    if (!addr)
-        console.log('ftp <host>');
-    else
-        ftp = ftop(addr);
+    if (!addr) {
+        console.log('eftipy <host>');
+    } else {
+        ftp = eftipy(addr);
         
-        ftp.on('error', function(error) {
-            console.error(error.message);
-        });
+        ftp.on('error', error);
         
         ftp.on('dir', function(list) {
             list.forEach(function(file) {
@@ -27,11 +29,12 @@
         });
         
         ftp.on('file', function(stream) {
-            pipe.getBody(stream, function(error, data) {
+            pipe([stream, process.stdout], {end: true}, function(error) {
                 if (error)
                     console.error(error.message);
-                else
-                    console.log(data);
+                
+                process.exit();
             });
         });
+    }
 })();
