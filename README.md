@@ -1,6 +1,6 @@
 # Eftipy
 
-Create new processes, change directories, auto switch between spawn and exec.
+Ftp traversal.
 
 ## Install
 
