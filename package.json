@@ -1,19 +1,19 @@
 {
-  "name": "ftop",
+  "name": "eftipy",
   "version": "1.4.2",
   "author": "coderaiser <mnemonic.enemy@gmail.com> (https://github.com/coderaiser)",
   "description": "Ftp operations",
-  "homepage": "http://github.com/coderaiser/ftop",
+  "homepage": "http://github.com/coderaiser/eftipy",
   "repository": {
     "type": "git",
-    "url": "git://github.com/coderaiser/ftop.git"
+    "url": "git://github.com/coderaiser/eftipy.git"
   },
   "dependencies": {
-    "pipe-io": "^1.1.0"
+    "pipe-io": "~1.1.0"
   },
   "license": "MIT",
-  "main": "lib/ftop.js",
+  "main": "lib/eftipy.js",
   "bin": {
-    "ftop": "bin/ftop.js"
+    "eftipy": "bin/eftipy.js"
   }
 }
