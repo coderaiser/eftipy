@@ -9,6 +9,7 @@
     "url": "git://github.com/coderaiser/eftipy.git"
   },
   "dependencies": {
+    "ftp": "~0.3.7",
     "pipe-io": "~1.1.0"
   },
   "license": "MIT",
