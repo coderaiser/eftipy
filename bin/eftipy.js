@@ -6,8 +6,7 @@
     var eftipy      = require('../'),
         pipe        = require('pipe-io'),
         
-        slice       = [].slice.bind(process.argv),
-        argv        = slice(2),
+        argv        = process.argv.slice(2),
         addr        = argv[0],
         filename    = argv[1],
         callback    = function(error) {
