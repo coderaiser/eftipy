@@ -1,3 +1,11 @@
+2014.11.17, v0.2.1
+
+feature:
+- (eftipy) argv: slice.bind -> slice
+- (package) v0.2.0
+- (eftipy) add upload
+
+
 2014.11.6, v0.2.0
 
 feature:
