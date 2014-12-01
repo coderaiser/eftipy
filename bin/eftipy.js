@@ -19,6 +19,8 @@
     
     if (!addr) {
         console.log('eftipy <host> <filename>');
+    } else if (/-v|--version/.test(addr)){
+        console.log(version());
     } else {
         ftp = eftipy(addr, filename);
         
@@ -33,5 +35,9 @@
         ftp.on('file', function(stream) {
             pipe([stream, process.stdout], callback);
         });
+    }
+    
+    function version() {
+        return 'v' + require('../package.json').version;
     }
 })();
