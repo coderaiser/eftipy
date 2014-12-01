@@ -12,8 +12,6 @@
         callback    = function(error) {
             if (error)
                 console.error(error.message);
-            
-            process.exit();
         },
         ftp;
     
