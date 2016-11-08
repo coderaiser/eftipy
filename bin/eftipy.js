@@ -3,7 +3,7 @@
 'use strict';
 
 var eftipy      = require('../'),
-    pipe        = require('pipe-io'),
+    pipe        = require('pipe-io/legacy'),
     
     argv        = process.argv.slice(2),
     addr        = argv[0],
