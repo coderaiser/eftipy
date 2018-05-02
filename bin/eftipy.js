@@ -3,7 +3,7 @@
 'use strict';
 
 const eftipy = require('../');
-const pipe = require('pipe-io/legacy');
+const pipe = require('pipe-io');
 
 const argv = process.argv.slice(2);
 const addr = argv[0];
@@ -13,14 +13,12 @@ const callback = (error) => {
         console.error(error.message);
 };
 
-let ftp;
-
 if (!addr) {
     console.log('eftipy <host> <filename>');
 } else if (/-v|--version/.test(addr)){
     console.log(version());
 } else {
-    ftp = eftipy(addr, filename);
+    const ftp = eftipy(addr, filename);
     
     ftp.on('error', callback);
     
