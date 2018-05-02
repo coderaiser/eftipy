@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "ftp": "~0.3.7",
-    "pipe-io": "^2.0.1"
+    "pipe-io": "^3.0.0"
   },
   "license": "MIT",
   "main": "lib/eftipy.js",
