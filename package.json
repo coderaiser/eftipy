@@ -16,5 +16,8 @@
   "main": "lib/eftipy.js",
   "bin": {
     "eftipy": "bin/eftipy.js"
+  },
+  "engines": {
+    "node": ">=4.0.0"
   }
 }
